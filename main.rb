@@ -36,6 +36,7 @@ def get_menu_option(options)
   options.each_with_index { |(option, _), index| puts "#{index + 1}. #{option}" }
 
   option = gets.chomp.to_i
+  option -= 1
   if option >= 0 && option < options.size
     options.keys[option]
   else
