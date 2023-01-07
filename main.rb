@@ -33,7 +33,7 @@ end
 
 def get_menu_option(options)
   puts 'Please choose an option by entering a number:'
-  options.each_with_index { |(option, _), index| puts "#{index}) #{option}" }
+  options.each_with_index { |(option, _), index| puts "#{index + 1}. #{option}" }
 
   option = gets.chomp.to_i
   if option >= 0 && option < options.size
